@@ -17,7 +17,7 @@ ENV SPARK_HOME /usr/bin/spark-${spark_version}-bin-hadoop${hadoop_version}
 
 RUN curl https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/3.2.2/hadoop-aws-3.2.2.jar -o $SPARK_HOME/jars/hadoop-aws-3.2.2.jar
 
-RUN curl https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-s3/1.11.1034/aws-java-sdk-s3-1.11.1034.jar -o $SPARK_HOME/jars/aws-java-sdk-s3-1.11.1034.jar
+RUN curl https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/1.11.1034/aws-java-sdk-bundle-1.11.1034.jar -o $SPARK_HOME/jars/aws-java-sdk-bundle-1.11.1034.jar
 
 ENV SPARK_MASTER_HOST spark-master
 ENV SPARK_MASTER_PORT 7077
