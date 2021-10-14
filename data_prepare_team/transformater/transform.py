@@ -40,7 +40,7 @@ class Transform():
 
     @staticmethod
     def split(source):
-        condition = col("image").isNotNull() | (col("image") != '')
+        condition = col("image").isNotNull() & (col("image") != '')
         return source.filter(condition), source.filter(~condition)
 
     def unload(self, dataframe, directory):
