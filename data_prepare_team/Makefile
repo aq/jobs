@@ -27,7 +27,7 @@ run-from-aws:
 		--aws_sak=secretkeysecretkeysecretkeysecretke
 
 test:
-	pytest
+	pipenv run pytest
 
 pyspark:
 	docker exec -it  spark-master bin/pyspark --name backmarket-test
